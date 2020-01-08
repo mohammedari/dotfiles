@@ -1,0 +1,15 @@
+xkb_keymap {
+	xkb_keycodes  { include "evdev+aliases(qwerty)" };
+	xkb_types     { include "complete" };
+	xkb_compat    { include "complete" };
+	xkb_symbols   {
+    include "pc+jp+us:2+inet(evdev)"
+    
+    replace key <HENK> { [ Return ] };
+		replace key <MUHE> { [ BackSpace ] };
+		replace key <CAPS> { [ Control_L ] };
+    replace key <HKTG> { [ Delete ] };
+		modifier_map Control { <CAPS> };
+  };
+	xkb_geometry  { include "pc(pc105)"	};
+};
